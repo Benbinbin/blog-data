@@ -23,6 +23,17 @@ module.exports = {
       },
     }
   },
+  // bundler: '@vuepress/webpack',
+  // bundlerConfig: {
+  //   postcss: {
+  //     postcssOptions: {
+  //       plugins: {
+  //         tailwindcss: {},
+  //         autoprefixer: {},
+  //       },
+  //     },
+  //   },
+  // },
   plugins: [
     require('./plugins/addTime.js'),
     [require('./plugins/createHomePage.js'),
@@ -82,12 +93,12 @@ module.exports = {
     __BASE__: "/blog-data/",
     __HOME_PAGE_TITLE__: "DATA",
     __HOME_PAGE_ICON__: "home_icon.svg",
-    __HOME_DESCRIPTION__: "这是我的<a href='https://benbinbin.github.io/tech-blog/' target='_blank' class='hover:text-blue-600 underline font-bold transition-colors'>部落格</a>之一，主要内容是我在学习数据分析和可视化相关过程中做的笔记。",
+    __HOME_DESCRIPTION__: "这是我的<a href='https://benbinbin.github.io/tech-blog/' target='_blank' class='hover:text-blue-600 underline font-bold transition-colors'>技术部落格</a>之一，主要内容是我在学习数据分析和可视化相关过程中做的笔记。",
     __HOME_PAGE_COLOR__: '#FBBF24',
     __AVATAR__: 'avatar.png',
     __CLASSIFICATIONS__: ['All', 'Anaconda', 'Jupyter', 'Math', 'Python', 'Vis'],
     __FOLDERS__: ['Anaconda', 'Jupyter', 'Math', 'Python', 'Vis'],
-    __FOOTER_AVATAR_LINK__: 'https://github.com/Benbinbin/two-dishes-one-fish',
+    __FOOTER_AVATAR_LINK__: 'https://benbinbin.github.io/',
     __AUTHOR__: 'Benbinbin',
     __FOOTER_LICENSE__: 'CC-BY-SA-4.0',
     __FOOTER_LICENSE_LINK__: 'https://creativecommons.org/licenses/by-sa/4.0/deed.en',
