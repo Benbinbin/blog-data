@@ -135,32 +135,31 @@ $$
 <!-- region -->
 $$
 \begin{aligned}
-Ax &=
+Ax & =
 \begin{bmatrix}
-  1&0  &0 \\
-  -1&1  &0 \\
-  0&-1  &1
+  1 & 0 & 0 \\
+  -1 & 1 & 0 \\
+  0 & -1 & 1
 \end{bmatrix}
+\begin{bmatrix}
+  x_{1} \\
+  x_{2} \\
+  x_{3}
+\end{bmatrix}
+& =
 \begin{bmatrix}
  x_{1} \\
- x_{2}\\
- x_{3}
-\end{bmatrix}
-&=
-\begin{bmatrix}
- x_{1}\\
- x_{2} - x_{1}\\
+ x_{2} - x_{1} \\
  x_{3} - x_{2}
 \end{bmatrix}
-&=
-b
+& = b
 \end{aligned}
 $$
 <!-- endregion -->
 
-得出的向量元素是由原向量的元素相减产生的，因此称这类型的矩阵 A 为**差异矩阵**，上述示例矩阵 $A$ 为一阶差矩阵 first difference matrix。
+得出的向量元素是由原向量的**元素相减产生**的，因此称这类型的矩阵 A 为**差异矩阵**，上述示例矩阵 $A$ 为一阶差矩阵 first difference matrix。
 
-类似地，**求和矩阵**就是使得结果向量的元素是由原向量的元素相加产生的，记作 S
+类似地，**求和矩阵**就是使得结果向量的元素是由原向量的**元素相加产生**的，记作 $S$
 
 当矩阵 A 为 $\begin{bmatrix}  1&0  &0 \\  1&1  &0 \\  1&1  &1\end{bmatrix}$ 则有 $Ax=b$ 为
 
