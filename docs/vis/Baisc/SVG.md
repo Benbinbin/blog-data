@@ -61,8 +61,6 @@ SVG 绘制图形时需要使用坐标系统/网格系统：
 
   :bulb: 在 `<svg>` 标签内的元素的坐标和宽度如果使用数值（而不带单位）时，就会以 `viewBox` 属性设定的值作为**相对定位**和**相对单位**。
 
-
-
 ```html
 <svg width="200" height="200" viewBox="0 0 100 100">
 ```
@@ -82,11 +80,14 @@ SVG 绘制图形时需要使用坐标系统/网格系统：
 </svg>
 ```
 
-<iframe height="100" style="width: 100%;" scrolling="no" title="different viewBox" src="https://codepen.io/benbinbin/embed/MWvpLPp?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" style="width: 100%;" scrolling="no" title="different viewBox" src="https://codepen.io/benbinbin/embed/MWvpLPp?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/benbinbin/pen/MWvpLPp">
   different viewBox</a> by Benbinbin (<a href="https://codepen.io/benbinbin">@benbinbin</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
+
+
+
 :bulb: viewBox 和 viewport 可能不一致，但有时候希望通过强制缩放，让 viewBox 铺满 viewport，可以使用属性 `preserveAspectRatio` 将图形拉伸占据整个视口，该属性设置拉伸过程中的[长宽比例](https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/preserveAspectRatio)，以保持图形不变形
 
 
@@ -134,11 +135,12 @@ SVG 与 HTML 类似，一个简单的 SVG 文档由 `<svg>` 根元素和**基本
 </svg>
 ```
 
-<iframe height="100" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/benbinbin/embed/XWaMOOz?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/benbinbin/embed/XWaMOOz?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/benbinbin/pen/XWaMOOz">
   Untitled</a> by Benbinbin (<a href="https://codepen.io/benbinbin">@benbinbin</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
+
 
 使用元素 `<rect/>` 绘制一个矩形，可以通过 6 个基本属性控制其位置和形状：
 
