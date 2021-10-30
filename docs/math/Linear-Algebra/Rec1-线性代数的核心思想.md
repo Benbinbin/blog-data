@@ -23,8 +23,11 @@ graph LR
 ```
 
 ## Vector
-* 向量的线性组合 Linear Combination：$x_{1} \overrightarrow{\mu }+x_{2} \overrightarrow{\nu }+x_{3} \overrightarrow{\omega } = b$，其中：$x_{1}$，$x_{2}$，$x_{3}$ 称为标量 scaler。
-    可以用线性组合的观点来理解**矩阵与向量相乘**，由原来的向量（$\overrightarrow{\mu }$、$\overrightarrow{\nu }$、$\overrightarrow{\nu }$）构成列数为 3 的矩阵 A，原来的系数（$x_{1}$、$x_{2}$、$x_{3}$）构成了向量 $x$，因此矩阵与向量相乘 $Ax$ 是矩阵的各列基于向量的相应元素进行**线性组合**。
+
+矩阵与向量相乘 $Ax=b$ 两种理解角度
+
+* 矩阵基于向量的线性组合 Linear Combination：$x_{1} \overrightarrow{\mu }+x_{2} \overrightarrow{\nu }+x_{3} \overrightarrow{\omega } = b$，其中：$x_{1}$，$x_{2}$，$x_{3}$ 称为标量 scaler。
+    可以用==线性组合==的观点来理解**矩阵与向量相乘**，由原来的向量（$\overrightarrow{\mu }$、$\overrightarrow{\nu }$、$\overrightarrow{\nu }$）构成列数为 3 的矩阵 A，原来的系数（$x_{1}$、$x_{2}$、$x_{3}$）构成了向量 $x$，因此矩阵与向量相乘 $Ax$ 是矩阵 $A$ 的各列基于向量 $x$ 的相应元素进行**线性组合**。
 
     **Subspace 子空间**
 
@@ -32,7 +35,7 @@ graph LR
     * 类似地，$x_{1}\overrightarrow{\mu }$ 与 $x_{2} \overrightarrow{\nu }$ 构成一个平面
     * 而三者 $x_{1}\overrightarrow{\mu }$，$x_{2} \overrightarrow{\nu }$，$x_{3} \overrightarrow{\omega }$ 共同构成一个三维空间
 
-* 向量的差异转换 different transform：使用[差异矩阵或求和将矩阵](./Cheatsheet.md#差异矩阵与求和矩阵)与向量相乘，得到的结果向量的元素是由原向量的元素之间相减或相加构成的。
+* 向量基于矩阵的差异转换 different transform：使用[差异矩阵或求和矩阵](./Cheatsheet.md#差异矩阵与求和矩阵)与向量相乘，得到的结果向量的元素是由原向量的元素之间相减或相加构成的。
     因此这种特殊的矩阵与向量相乘 $Ax=b$，可以将矩阵 $A$ 看作是**将向量 $x$ 到 $b$ 的转换**；当矩阵为可逆矩阵 inverse 时，有 $x=A^{-1}b$，相应地可以**将矩阵 $A^{-1 }$ 看作是将向量 $b$ 到 $x$ 的转换**
 
 ## Matrix
@@ -134,10 +137,9 @@ $$
 
 
 ## Sbuspace
-向量空间是在线性组合下闭合的向量的集合，即由向量的所有可能的线性组合构成的。
+向量空间是在线性组合下**闭合**的向量的集合，即由向量的所有可能的线性组合构成的。
 
-## Subspace
-子空间是指矩阵的列构成的向量，它们的所有可能的线性组成所覆盖的空间维度，如果低于向量原来可以表示的最大维度空间，则该子空间是真子空间。
+子空间是指**矩阵的列构成的向量**，它们的所有可能的线性组成所覆盖的空间维度，如果低于向量原来可以表示的最大维度空间，则该子空间是**真子空间**。
 
 对于矩阵 $C=\begin{aligned} \begin{bmatrix} 1&  0& -1\\-1&  1& 0\\0&  -1& 1\end{bmatrix}\end{aligned}$ 每一列作为向量，分别是：
 
@@ -184,7 +186,7 @@ $$
 
 即唯有向量 $b$ 各元素满足 $b_{1} + b_{2} + b_{3} = 0$ 时才可以求出对应的解 $x$（向量）。
 
-==一个向量空间最小的子空间是零向量，在几何形式就是原点。==
+==一个向量空间最小的子空间是**零向量**，在几何形式就是原点。==
 
 ## Basis
 空间 $\mathbb{R}^{n}$ 的**基 basis** 是由 n 个 $\mathbb{R}^{n}$ 维的「独立」向量组成。从矩阵的角度考虑就是，==由**可逆矩阵的列**组成的向量集合作为基==。
