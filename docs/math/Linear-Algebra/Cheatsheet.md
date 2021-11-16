@@ -1,5 +1,5 @@
 ---
-  show: true
+show: true
 collection: MIT 18.06SC Linear Algebra
 collectionOrder: 0
 summary: 线性代数速查表
