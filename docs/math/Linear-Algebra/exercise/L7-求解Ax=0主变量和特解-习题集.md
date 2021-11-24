@@ -8,7 +8,7 @@ tags:
 # L7-求解Ax=0主变量和特解-习题集
 参考：
 
-* Unit I: Ax = b and the Four Subspaces - Solving Ax = 0: Pivot Variables, Special Solutions - [Check Yourself](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/ax-b-and-the-four-subspaces/solving-ax-0-pivot-variables-special-solutions/)
+* Unit I: Ax = b and the Four Subspaces - Solving Ax = 0: Pivot Variables, Special Solutions - [Check Yourself](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/ax-b-and-the-four-subspaces/independence-basis-and-dimension/)
 * 题源：[Problem: Exercises on solving Ax = 0: pivot variables, special solutions](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/ax-b-and-the-four-subspaces/solving-ax-0-pivot-variables-special-solutions/MIT18_06SCF11_Ses1.7prob.pdf) | [pdf](./attachments/MIT18_06SCF11_Ses1.7prob.pdf)
 * 参考答案：[Solutions: Exercises on solving Ax = 0: pivot variables, special solutions](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/ax-b-and-the-four-subspaces/solving-ax-0-pivot-variables-special-solutions/MIT18_06SCF11_Ses1.7sol.pdf) | [pdf](./attachments/MIT18_06SCF11_Ses1.7sol.pdf)
 
