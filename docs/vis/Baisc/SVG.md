@@ -236,7 +236,7 @@ SVG 与 HTML 类似，一个简单的 SVG 文档由 `<svg>` 根元素和**基本
 
 [元素 `<path>` 绘制线条、曲线、弧形等图形](https://developer.mozilla.org/zh-CN/docs/Web/SVG/Tutorial/Paths)，是 SVG 形状中最强大的一个，可以通过路径 path 绘制出复杂的图形。
 
-**其关键参数是 `d`：用来设置一个「命令+参数」的集合描述/定义 *define* 如何绘制路径。**其中每一个命令都用一个关键字母表示，如 `M` 命令取自 Move to 表示将点移动到相应的坐标，字母后面是一对点数据 `x, y`，表示 x 和 y 轴坐标参数。
+**其关键参数是 `d`：用来设置一个「命令+参数」的集合描述/定义 *define* 如何绘制路径。** 其中每一个命令都用一个关键字母表示，如 `M` 命令取自 Move to 表示将点移动到相应的坐标，字母后面是一对点数据 `x, y`，表示 x 和 y 轴坐标参数。
 
 * `M x,y`  M 表示 **Move To** 移动，其作用就像是把绘画笔从画纸处提起，然后移动到指定的点 (x, y) 该过程不会画出线（不会生成路径，一般作为开始命令，设置路径的起点）
 * `L x,y` L 表示 **Line To** 画直线，其作用是从当前位置点画一条直线到指定的点 (x, y)
@@ -384,7 +384,7 @@ SVG 与 HTML 类似，一个简单的 SVG 文档由 `<svg>` 根元素和**基本
 ```html
 <svg width="320px" height="320px" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M20 315
-           A 30 50 0 0 1 162.55 162.45" 
+           A 30 50 0 0 1 162.55 162.45"
         stroke="black" fill="green" stroke-width="2" fill-opacity="0.5"/>
 </svg>
 ```
@@ -459,7 +459,7 @@ SVG 与 HTML 类似，一个简单的 SVG 文档由 `<svg>` 根元素和**基本
 常用属性：
 
 * `href` 指定路径
-* `method` 文字沿路径呈现的方法，可以设置为 `align` 或 `stretch` 
+* `method` 文字沿路径呈现的方法，可以设置为 `align` 或 `stretch`
 * `path` 直接在元素中设置路径图形
 * `side` 在路径哪一侧放置文字，可以设置为 `left`（默认）或 `right`
 * `spacing` 文字之间的间隔方式，可以设置为 `auto` 或 `exact`
@@ -697,7 +697,7 @@ SVG 可以使用 [SMIL（Synchronized Multimedia Integration Language）](https:
     <!-- 高斯模糊效果 -->
     <feGaussianBlur stdDeviation="5"/>
   </filter>
-  
+
   <circle cx="60" cy="60" r="50" fill="green"/>
   <!-- 应用滤镜 blurMe -->
   <circle cx="170" cy="60" r="50" fill="green" filter="url(#blurMe)"/>
@@ -803,7 +803,7 @@ SVG 可以使用 [SMIL（Synchronized Multimedia Integration Language）](https:
 
   <!-- using my linear gradient -->
   <circle cx="5" cy="5" r="2" fill="url('#myLinearGradient')" />
-    
+
   <!-- using my radial gradient -->
   <circle cx="10" cy="5" r="2" fill="url('#myRadialGradient')" />
 </svg>
@@ -1062,7 +1062,7 @@ SVG 可以使用 [SMIL（Synchronized Multimedia Integration Language）](https:
 
 以下的元素可以提高 SVG 文档的可访问性
 
-#### `<desc>` 
+#### `<desc>`
 
 在其他元素内部，为目标元素提供替代性文字描述，但是这些文本内容并不渲染在页面上
 
