@@ -1,0 +1,1 @@
+const t={key:"v-ef98b064",path:"/math/Statistics/Descriptive-Statistics/%E5%BD%A2%E7%8A%B6.html",title:"\u5F62\u72B6",lang:"zh-CN",frontmatter:{createdTime:1625469658e3,updatedTime:1635870821e3,tags:["statistics"]},excerpt:"",headers:[],filePathRelative:"math/Statistics/Descriptive-Statistics/\u5F62\u72B6.md",git:{updatedTime:1625469658e3}};export{t as data};

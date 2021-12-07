@@ -1,0 +1,1 @@
+const a={key:"v-8daa1a0e",path:"/",title:"",lang:"zh-CN",frontmatter:{layout:"HomeLayout",cards:[{name:"Anaconda",image:"anaconda.svg"},{name:"Jupyter",image:"jupyter.svg"},{name:"Math",image:"math.svg"},{name:"Python",image:"python.svg"},{name:"Vis",image:"vis.svg"}]},excerpt:"",headers:[],filePathRelative:null,git:{}};export{a as data};
