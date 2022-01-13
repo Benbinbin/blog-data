@@ -37,35 +37,40 @@ tags:
 
 
 ## 坐标定位
+SVG 绘制图形时需要使用坐标系统/网格系统，元素 `<svg>` 创建了一块无线的画布，画布中心（假设存在一个中心点）坐标为 `(0, 0)`，下图展现了画布的一部分：
 
-SVG 绘制图形时需要使用坐标系统/网格系统：
-
-* 以页面的**左上角为 `(0,0)` 坐标点**，坐标以像素为单位
-* **x 轴正方向是向右**
-* **y 轴正方向是向下**。
+* 左上角为 `(0,0)` 坐标点，坐标以像素为单位
+* x 轴正方向是向右
+* y 轴正方向是向下
 
 ![Canvas_default_grid](./images/20201016143051726_10893.png)
 
-
-
 ## viewport 和 viewBox
+* viewport 视窗/视口是一个表示**当前可见**的计算机图形区域的概念。
 
-* viewport 视口是一个表示**当前可见**的计算机图形区域的概念。在 Web 浏览器术语中通常与**浏览器窗口相同**，但不包括浏览器的 UI（如菜单栏等），视口外的内容在被滚动进来前都是不可见的。在 SVG 概念中，它相当于 `<svg>` 元素的大小
+  在 Web 浏览器术语中通常与**浏览器窗口相同**，但不包括浏览器的 UI（如菜单栏等），视口外的内容在被滚动进来前都是不可见的。
 
-* viewBox 是 `<svg>` 标签的一个属性，包含**四个参数（以空格或逗号分隔） `<svg viewBox="min-x min-y width height">` 指定一个容器（宽和高）以显示图形元素**，相当于规定了在 `<svg>` 元素中哪些部分是可视的，即设置了一个缩放和平移的初始状态
+  在 SVG 概念中，它相当于 `<svg>` 元素的大小，可以通过 `<svg>` 的属性 `width` 和 `height` 进行设置，也可以通过 CSS 设置 `<svg>` 元素的宽高样式来指定 viewport 的大小。
 
-  * `min-x` 和 `min-y` 指定了容器的**左上角的坐标**，即定义了父元素的坐标系统（设置了平移的初始状态）
-  * `width` 和 `height` 指定**容器的宽和高**（设置了缩放的初始状态）
+* viewBox 是 SVG 的一个属性 `<svg viewBox="min-x min-y width height">` 包含四个参数，它们之间以空格或逗号。
 
-  设定不同的`viewBox` 属性值可以实现类似于**缩放**或**平移**的效果。修改容器的 `min-x` 和 `min-y` 可以实现整体「移动」容器内元素的效果；修改容器 `width` 和 `height` 可以实现整体「缩放」容器内元素的效果。
+  :bulb: 可以将元素 `<svg>` 看作是一块静止的无限大小的画布，我们拿着一个方形的望远镜观察它，而 viewBox 就是这个方形的望远镜，viewBox 后两个参数 `width`、`height` 是这个方形望远镜的镜筒大小，前两个参数 `min-x`、`min-y` 是我们移动望远镜的位置
+
+  * `min-x` 和 `min-y` 指定了视觉的左上角在 SVG 坐标体系中的位置
+  * `width` 和 `height` 指定可视角度的大小
+
+  viewBox 属性的前两个值 `min-x` 和 `min-y` 用于移动视觉，后两个值 `width` 和 `height` 用于设置视觉的大小。 所以不同的 viewBox 值可以实现类似于**缩放**或**平移**的效果。
 
   :bulb: 在 `<svg>` 标签内的元素的坐标和宽度如果使用数值（而不带单位）时，就会以 `viewBox` 属性设定的值作为**相对定位**和**相对单位**。
+
+  相当于规定了在 `<svg>` 元素中哪些部分是可视的，即设置了一个缩放和平移的初始状态
+
 
 ```html
 <svg width="200" height="200" viewBox="0 0 100 100">
 ```
 
-这里定义的画布尺寸是 `200*200px`。但是 `viewBox` 属性定义了画布上可以显示的区域：从 (0,0) 点开始，`100*100` 的区域。这个区域会放到 `200*200` 的画布上显示，于是就形成了[**放大两倍**的效果](https://developer.mozilla.org/zh-CN/docs/Web/SVG/Tutorial/Positions)。
+这里 `width` 和 `height` 属性定义的视窗 viewport 尺寸是 `200*200px`；但是 `viewBox` 属性定义了视觉范围（可以看到的区域）是从 `(0,0)` 点开始，大小为 `100*100` 的区域，这个区域会放到 `200*200` 的视窗上显示，于是就形成了[**放大两倍**的效果](https://developer.mozilla.org/zh-CN/docs/Web/SVG/Tutorial/Positions)。
 
 ```html
 <!-- svg 元素大小相同 -->
@@ -86,9 +91,9 @@ SVG 绘制图形时需要使用坐标系统/网格系统：
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
+:bulb: viewBox 和 viewport 大小（和宽高比例）可能不一致，可以使用属性 `preserveAspectRatio` 来设置如何将 viewBox 指定的可视画面填充到 viewport 视窗中，该属性设置对齐方式和拉伸过程中是否保[长宽比例](https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/preserveAspectRatio)。
 
-
-:bulb: viewBox 和 viewport 可能不一致，但有时候希望通过强制缩放，让 viewBox 铺满 viewport，可以使用属性 `preserveAspectRatio` 将图形拉伸占据整个视口，该属性设置拉伸过程中的[长宽比例](https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/preserveAspectRatio)，以保持图形不变形
+:clapper: 关于 viewBox 和 viewport 概念，及 `preserveAspectRatio` 属性的详细讲解可以参考这个[视频](https://www.bilibili.com/video/BV1mv411i7e8)。
 
 
 
